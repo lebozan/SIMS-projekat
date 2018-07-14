@@ -42,4 +42,8 @@ public class SefStanice extends Korisnik{
 	public void ZaradaUPerioduJedna(Date dat1, Date dat2) {
 		
 	}
+	
+	public void PromenaCene(String odakle,int novaCena) {
+		
+	}
 }
