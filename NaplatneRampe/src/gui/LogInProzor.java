@@ -68,7 +68,7 @@ public class LogInProzor extends Stage {
 
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
-
+//        boolean uspesanLogin;
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -76,6 +76,7 @@ public class LogInProzor extends Stage {
             	boolean potvrda = proveriLogin(userTextField.getText(), pwBox.getText());
             	
             	if (potvrda) {
+//            		uspesanLogin = potvrda;
             		actiontarget.setFill(Color.LIMEGREEN);
             		actiontarget.setText("Uspesno ste se ulogovali!");
             	} else {

@@ -30,10 +30,8 @@ public class Aplikacija extends Application{
 		b = new Button();
 		b.setText("klikni me pls");
 		login = new LogInProzor();
-//		System.out.println(login.getUlogovan().getUsername());
 		StackPane layout = new StackPane();
 		layout.getChildren().add(b);
-		
 		Scene s = new Scene(layout, 1000, 600);
 		primaryStage.setScene(s);
 		primaryStage.show();
