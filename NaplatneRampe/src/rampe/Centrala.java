@@ -3,13 +3,13 @@ package rampe;
 import java.util.ArrayList;
 
 public class Centrala {
-	private ArrayList<NaplatnaRampa> naplatneRampe = new ArrayList<NaplatnaRampa>();
+	private ArrayList<NaplatnaStanica> naplatneRampe = new ArrayList<NaplatnaStanica>();
 
-	public ArrayList<NaplatnaRampa> getNaplatneRampe() {
+	public ArrayList<NaplatnaStanica> getNaplatneRampe() {
 		return naplatneRampe;
 	}
 
-	public void setNaplatneRampe(ArrayList<NaplatnaRampa> naplatneRampe) {
+	public void setNaplatneRampe(ArrayList<NaplatnaStanica> naplatneRampe) {
 		this.naplatneRampe = naplatneRampe;
 	}
 

@@ -1,84 +1,102 @@
 package rampe;
 
-public class NaplatnaRampa {
+import java.util.Map;
+
+public class NaplatnaStanica {
 	private String naziv;
-	private int K1cena;
-	private int K2cena;
-	private int K3cena;
-	private int K4cena;
-	private int K5cena;
-	private boolean Aktivna;
+	private Map<String, Integer> K1cena;
+	private Map<String, Integer> K2cena;
+	private Map<String, Integer> K3cena;
+	private Map<String, Integer> K4cena;
+	private Map<String, Integer> K5cena;
+	private boolean aktivna;
 	
-	NaplatnaRampa(){
+	public NaplatnaStanica(){
 	}
 	
-	NaplatnaRampa(NaplatnaRampa nr){
+	public NaplatnaStanica(NaplatnaStanica nr){
 		this.naziv = nr.getNaziv();
 		this.K1cena = nr.getK1cena();
 		this.K2cena = nr.getK2cena();
 		this.K3cena = nr.getK3cena();
 		this.K4cena = nr.getK4cena();
 		this.K5cena = nr.getK5cena();
-		this.Aktivna = nr.isAktivna();
+		this.aktivna = nr.isAktivna();
 	}
 	
-	NaplatnaRampa(String naziv,int k1,int k2,int k3,int k4,int k5,boolean akt){
+	
+	
+	public NaplatnaStanica(String naziv, Map<String, Integer> k1cena, Map<String, Integer> k2cena,
+			Map<String, Integer> k3cena, Map<String, Integer> k4cena, Map<String, Integer> k5cena, boolean aktivna) {
+		super();
 		this.naziv = naziv;
-		this.K1cena = k1;
-		this.K2cena = k2;
-		this.K3cena = k3;
-		this.K4cena = k4;
-		this.K5cena = k5;
-		this.Aktivna = akt;
+		K1cena = k1cena;
+		K2cena = k2cena;
+		K3cena = k3cena;
+		K4cena = k4cena;
+		K5cena = k5cena;
+		this.aktivna = aktivna;
 	}
-	
+
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
-	public int getK1cena() {
+	
+	public Map<String, Integer> getK1cena() {
 		return K1cena;
 	}
-	public void setK1cena(int k1cena) {
+
+	public void setK1cena(Map<String, Integer> k1cena) {
 		K1cena = k1cena;
 	}
-	public int getK2cena() {
+
+	public Map<String, Integer> getK2cena() {
 		return K2cena;
 	}
-	public void setK2cena(int k2cena) {
+
+	public void setK2cena(Map<String, Integer> k2cena) {
 		K2cena = k2cena;
 	}
-	public int getK3cena() {
+
+	public Map<String, Integer> getK3cena() {
 		return K3cena;
 	}
-	public void setK3cena(int k3cena) {
+
+	public void setK3cena(Map<String, Integer> k3cena) {
 		K3cena = k3cena;
 	}
-	public int getK4cena() {
+
+	public Map<String, Integer> getK4cena() {
 		return K4cena;
 	}
-	public void setK4cena(int k4cena) {
+
+	public void setK4cena(Map<String, Integer> k4cena) {
 		K4cena = k4cena;
 	}
-	public int getK5cena() {
+
+	public Map<String, Integer> getK5cena() {
 		return K5cena;
 	}
-	public void setK5cena(int k5cena) {
+
+	public void setK5cena(Map<String, Integer> k5cena) {
 		K5cena = k5cena;
 	}
+
 	public boolean isAktivna() {
-		return Aktivna;
+		return aktivna;
 	}
+
 	public void setAktivna(boolean aktivna) {
-		Aktivna = aktivna;
+		this.aktivna = aktivna;
 	}
 
 	@Override
 	public String toString() {
 		return "Naplatna Rampa: [naziv=" + naziv + ", K1cena=" + K1cena + ", K2cena=" + K2cena + ", K3cena=" + K3cena
-				+ ", K4cena=" + K4cena + ", K5cena=" + K5cena + ", Aktivna=" + Aktivna + "]";
+				+ ", K4cena=" + K4cena + ", K5cena=" + K5cena + ", Aktivna=" + aktivna + "]";
 	}
 
 	@Override
@@ -89,8 +107,8 @@ public class NaplatnaRampa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		NaplatnaRampa other = (NaplatnaRampa) obj;
-		if (Aktivna != other.Aktivna)
+		NaplatnaStanica other = (NaplatnaStanica) obj;
+		if (aktivna != other.aktivna)
 			return false;
 		if (K1cena != other.K1cena)
 			return false;

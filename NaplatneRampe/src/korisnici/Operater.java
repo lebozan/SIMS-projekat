@@ -1,15 +1,15 @@
 package korisnici;
 
-import rampe.NaplatnaRampa;
+import rampe.NaplatnaStanica;
 import rampe.Vozilo;
 
 public class Operater extends Korisnik {
-	private NaplatnaRampa radnoMesto;
+	private NaplatnaStanica radnoMesto;
 	
-	Operater(){
+	public Operater(){
 	}
 	
-	Operater(Operater o){
+	public Operater(Operater o){
 		this.username = o.getUsername();
 		this.password = o.getPassword();
 		this.ime = o.getIme();
@@ -18,7 +18,17 @@ public class Operater extends Korisnik {
 		this.radnoMesto = o.getRadnoMesto();
 	}
 	
-	Operater(String un, String pw, String ime, String prz,NaplatnaRampa rampa){
+	public Operater(String un, String pw, String ime, String prz){
+		this.username = un;
+		this.password = pw;
+		this.ime = ime;
+		this.prezime = prz;
+		this.uloga = UlogaKorisnika.OPERATER;
+		
+	}
+
+	
+	public Operater(String un, String pw, String ime, String prz, NaplatnaStanica rampa){
 		this.username = un;
 		this.password = pw;
 		this.ime = ime;
@@ -27,11 +37,11 @@ public class Operater extends Korisnik {
 		this.radnoMesto = rampa;
 	}
 
-	public NaplatnaRampa getRadnoMesto() {
+	public NaplatnaStanica getRadnoMesto() {
 		return radnoMesto;
 	}
 
-	public void setRadnoMesto(NaplatnaRampa radnoMesto) {
+	public void setRadnoMesto(NaplatnaStanica radnoMesto) {
 		this.radnoMesto = radnoMesto;
 	}
 

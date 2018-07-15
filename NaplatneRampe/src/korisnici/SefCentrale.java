@@ -8,10 +8,10 @@ public class SefCentrale extends Korisnik {
 	
 	private Centrala centrala;
 	
-	SefCentrale(){
+	public SefCentrale(){
 	}
 	
-	SefCentrale(SefCentrale sc){
+	public SefCentrale(SefCentrale sc){
 		this.username = sc.getUsername();
 		this.password = sc.getPassword();
 		this.ime = sc.getIme();
@@ -20,7 +20,15 @@ public class SefCentrale extends Korisnik {
 		this.centrala = sc.getCentrala();
 	}
 	
-	SefCentrale(String un, String pw, String ime, String prz,Centrala c) {
+	public SefCentrale(String un, String pw, String ime, String prz) {
+		this.username = un;
+		this.password = pw;
+		this.ime = ime;
+		this.prezime = prz;
+		this.uloga = UlogaKorisnika.SEFCENTRALE;
+	}
+	
+	public SefCentrale(String un, String pw, String ime, String prz,Centrala c) {
 		this.username = un;
 		this.password = pw;
 		this.ime = ime;

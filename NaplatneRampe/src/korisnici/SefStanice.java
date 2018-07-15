@@ -1,15 +1,15 @@
 package korisnici;
 
 import java.util.Date;
-import rampe.NaplatnaRampa;
+import rampe.NaplatnaStanica;
 
 public class SefStanice extends Korisnik{
-	private NaplatnaRampa rampa;
+	private NaplatnaStanica rampa;
 	
-	SefStanice(){
+	public SefStanice(){
 	}
 
-	SefStanice(String un, String pw, String ime, String prz,NaplatnaRampa rampa) {
+	public SefStanice(String un, String pw, String ime, String prz,NaplatnaStanica rampa) {
 		this.username = un;
 		this.password = pw;
 		this.ime = ime;
@@ -18,7 +18,15 @@ public class SefStanice extends Korisnik{
 		this.rampa = rampa;
 	}
 	
-	SefStanice(SefStanice ss){
+	public SefStanice(String un, String pw, String ime, String prz) {
+		this.username = un;
+		this.password = pw;
+		this.ime = ime;
+		this.prezime = prz;
+		this.uloga = UlogaKorisnika.SEFSTANICE;
+	}
+	
+	public SefStanice(SefStanice ss){
 		this.username = ss.getUsername();
 		this.password = ss.getPassword();
 		this.ime = ss.getIme();
@@ -27,11 +35,11 @@ public class SefStanice extends Korisnik{
 		this.uloga = UlogaKorisnika.SEFSTANICE;
 	}
 
-	public NaplatnaRampa getRampa() {
+	public NaplatnaStanica getRampa() {
 		return rampa;
 	}
 
-	public void setRampa(NaplatnaRampa rampa) {
+	public void setRampa(NaplatnaStanica rampa) {
 		this.rampa = rampa;
 	}
 	

@@ -1,13 +1,13 @@
 package korisnici;
 
-import rampe.NaplatnaRampa;
+import rampe.NaplatnaStanica;
 
 public class Administrator extends Korisnik {
 	
-	Administrator(){
+	public Administrator(){
 	}
 	
-	Administrator(Korisnik a){
+	public Administrator(Korisnik a){
 		this.username = a.getUsername();
 		this.password = a.getPassword();
 		this.ime = a.getIme();
@@ -16,7 +16,7 @@ public class Administrator extends Korisnik {
 		
 	}
 	
-	Administrator(String un, String pw, String ime, String prz){
+	public Administrator(String un, String pw, String ime, String prz){
 		this.username = un;
 		this.password = pw;
 		this.ime = ime;
@@ -40,7 +40,7 @@ public class Administrator extends Korisnik {
 		
 	}
 	
-	public void IzmeniStanicu(NaplatnaRampa nr) {
+	public void IzmeniStanicu(NaplatnaStanica nr) {
 		
 	}
 	
