@@ -47,16 +47,21 @@ public class Aplikacija extends Application{
 	public void postaviTrenutnogKorisnika(String uname,String pword, String ime, String prezime, int uloga) {
 		switch (uloga) {
 			case 0: trenutniKorisnik = new Administrator(uname, pword, ime, prezime);
+					
 					adminMeni(sadrzaj);
+					login.close();
 					break;
 			case 1: trenutniKorisnik = new SefCentrale(uname, pword, ime, prezime);
 					sefCentraleMeni(sadrzaj);
+					login.close();
 					break;
 			case 2: trenutniKorisnik = new SefStanice(uname, pword, ime, prezime);
 					sefStaniceMeni(sadrzaj);
+					login.close();
 					break;
 			case 3: trenutniKorisnik = new Operater(uname, pword, ime, prezime);
 					operatorStaniceMeni(sadrzaj);
+					login.close();
 					break;	
 		}
 		
