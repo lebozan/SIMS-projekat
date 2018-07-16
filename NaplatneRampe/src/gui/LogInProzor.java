@@ -24,7 +24,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import korisnici.Korisnik;
 
 public class LogInProzor extends Stage implements EventHandler<ActionEvent>{
 	
@@ -119,11 +118,6 @@ public class LogInProzor extends Stage implements EventHandler<ActionEvent>{
 		return retval;
 	}
 	
-	private void zatvori() {
-		
-		this.close();
-	}
-
 	public Aplikacija getRoditelj() {
 		return roditelj;
 	}
